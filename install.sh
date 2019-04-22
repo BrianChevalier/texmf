@@ -2,8 +2,7 @@
 
 TEXMF="/usr/local/texlive/texmf-local/tex/latex/local/"
 
-cp -fr *.sty $TEXMF
-cp -fr *.cls $TEXMF
-
-# Finish install
-#sudo texhash
+sudo cp -fr *.sty $TEXMF
+sudo cp -fr *.cls $TEXMF
+sudo cp -fr *.tex $TEXMF
+sudo texhash
