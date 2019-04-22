@@ -1,0 +1,79 @@
+((*- extends 'article.tplx' -*))
+
+((* block docclass *))
+    \documentclass{KDHnotes}
+((* endblock docclass *))
+
+((* block packages *))
+\usepackage{fancyvrb} % verbatim replacement that allows latex
+((* endblock packages *))
+
+((* block definitions *))
+    %% Verbatim stuff
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+((* endblock definitions *))
+
+((* block commands *))
+((* endblock commands *))
+
+% Author and Title from metadata
+((* block maketitle *))
+
+    ((*- if nb.metadata["latex_metadata"]: -*))
+
+            ((* for item in ['author', 'coursenum', 'subtitle', 'title', 'university', 'coursetitle'] *))
+                ((*- if nb.metadata["latex_metadata"][item]: -*))
+                    \((( item ))){((( nb.metadata["latex_metadata"][item] )))}
+
+                ((*- else -*))
+                     \((( item ))){Define "((( item )))" in nb metadata!}
+                ((*- endif *))
+        ((* endfor *))
+
+    ((*- endif *))
+
+
+
+    \date{\today}
+    \maketitle
+
+((* endblock maketitle *))
+
+
+%===============================================================================
+% Input
+%===============================================================================
+
+((* block input scoped *))
+((* if cell.metadata.hide_input or nb.metadata.hide_input *))
+
+((* else *))
+
+\begin{python}
+((( cell.source )))
+\end{python}
+
+((* endif *))
+((* endblock input *))
+
+%===============================================================================
+% Output
+%===============================================================================
+
+((* block execute_result scoped *))
+    ((*- for type in output.data | filter_data_type -*))
+    ((*- endfor -*))
+((* endblock execute_result *))
+
+
+%===============================================================================
+% Images
+%===============================================================================
+
+% Draw a figure using the graphicx package.
+((* macro draw_figure(filename) -*))
+((* set filename = filename | posix_path *))
+((*- block figure scoped -*))
+    \ipynbfig{((( filename )))}{CaPtIoN}
+((*- endblock figure -*))
+((*- endmacro *))

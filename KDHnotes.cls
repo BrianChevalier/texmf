@@ -29,6 +29,7 @@
 \RequirePackage[toc,page]{appendix}
 \RequirePackage{listings}
 \RequirePackage[nottoc,numbib]{tocbibind}
+
 % Provides basic commands for section headers
 % See: https://ctan.org/pkg/sectsty?lang=en
 \RequirePackage{sectsty}
@@ -168,6 +169,37 @@
 \definecolor{msgreen}{HTML}{EBF0DD}
 \definecolor{msred}{HTML}{F2DBDB}
 
+% -----
+% SYNTAX HIGHLIGHTING
+% -----
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{listings}
+\tcbuselibrary{listings}
+
+% Custom colors
+\RequirePackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+% Python environment
+\newtcblisting{python}
+{   colframe=msgreen,
+    colback=msgreen,
+    listing only,
+    listing options={
+        language=Python,
+        framerule=0.05pt,
+        basicstyle=\ttm,
+        otherkeywords={self},             % Add keywords here
+        keywordstyle=\ttb\color{deepblue},
+        emph={MyClass,__init__},          % Custom highlighting
+        emphstyle=\ttb\color{deepred},    % Custom highlighting style
+        stringstyle=\color{deepgreen},
+        breaklines = true
+    }
+}
 
 %%%---------
 \RequirePackage{empheq}
@@ -252,6 +284,19 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.8\linewidth]{Figures/#1}
+		\caption{#2}
+		\label{Fig:#1}
+	\end{figure}
+}
+
+%% FIGURE for .ipynb file conversion
+\RequirePackage{float}
+\newcommand{\ipynbfig}[2]{
+%1: Path relative to Figures/
+%2: Caption
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{#1}
 		\caption{#2}
 		\label{Fig:#1}
 	\end{figure}
