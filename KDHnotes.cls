@@ -278,12 +278,14 @@
 
 %% FIGURE COMMAND
 \RequirePackage{float}
+\RequirePackage[export]{adjustbox} % loads also graphicx
+
 \newcommand{\fig}[2]{
 %1: Path relative to Figures/
 %2: Caption
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\linewidth]{Figures/#1}
+		\includegraphics[max height=0.4\textheight,max width=0.8\textwidth]{Figures/#1}
 		\caption{#2}
 		\label{Fig:#1}
 	\end{figure}
@@ -296,7 +298,7 @@
 %2: Caption
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\linewidth]{#1}
+		\includegraphics[max height=0.4\textheight,max width=0.8\textwidth]{#1}
 		\caption{#2}
 		\label{Fig:#1}
 	\end{figure}
