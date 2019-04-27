@@ -57,7 +57,7 @@
 \pagestyle{fancy}
 \setlength{\headheight}{20pt}%15.2
 \fancyhf{}
-\lhead{\rightmark}
+\lhead{\leftmark}
 \rhead{\@coursenum---\@coursetitle}
 \lfoot{\small\textit{\@author}}
 \cfoot{\thepage}
