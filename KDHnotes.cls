@@ -42,15 +42,28 @@
 % By James D. Wells.
 % CERN Theoretical Physics
 % June 2,2013
-\setlength{\textheight}{17cm}
-\setlength{\textwidth}{23cm}
-\setlength{\topmargin}{-1.5cm} % -2.2cm
-\setlength{\oddsidemargin}{0.0cm}
-\setlength{\evensidemargin}{\oddsidemargin}
+%\setlength{\textheight}{17cm}
+%\setlength{\textwidth}{24cm}
+%\setlength{\lmargin}{2cm}
+%\setlength{\rmargin}{2cm}
+%\setlength{\topmargin}{-1.5cm} % -2.2cm
+%\setlength{\oddsidemargin}{0.0cm}
+%\setlength{\evensidemargin}{\oddsidemargin}
 \setlength{\parskip}{0cm}
 \setlength{\columnsep}{1cm}
 \sectionfont{\normalsize}
 \subsectionfont{\normalsize}
+
+% Margin specifications:
+% https://tex.stackexchange.com/questions/115908/geometry-showframe-landscape
+\RequirePackage[
+  outer=0.75in,
+  inner=0.75in,
+  vmargin=0.25in,
+  includehead,
+  includefoot,
+  headheight=15pt
+]{geometry}
 
 % Fancy Header Commands
 \RequirePackage{fancyhdr}
@@ -283,7 +296,7 @@
 \newcommand{\fig}[2]{
 %1: Path relative to Figures/
 %2: Caption
-	\begin{figure}[H]
+	\begin{figure}[h]
 		\centering
 		\includegraphics[max height=0.4\textheight,max width=0.8\textwidth]{Figures/#1}
 		\caption{#2}
@@ -296,7 +309,7 @@
 \newcommand{\ipynbfig}[2]{
 %1: Path relative to Figures/
 %2: Caption
-	\begin{figure}[H]
+	\begin{figure}[h]
 		\centering
 		\includegraphics[max height=0.4\textheight,max width=0.8\textwidth]{#1}
 		\caption{#2}
