@@ -141,7 +141,7 @@
 
 \vfill
 \begin{center}
-	\includegraphics[width = 0.9\columnwidth]{\@titleimage}
+  \includegraphics[max height=0.4\textheight,max width=0.8\textwidth]{\@titleimage}
 \end{center}
 \vfill
 
