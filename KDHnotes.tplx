@@ -11,6 +11,8 @@
 ((* block definitions *))
     %% Verbatim stuff
     \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 ((* endblock definitions *))
 
 ((* block commands *))
