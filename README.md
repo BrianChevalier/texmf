@@ -15,7 +15,7 @@ The following metadata should be added to the notebook metadata for using `KDHno
 
 ```json
 "latex_metadata": {
-        "author": "Brian Badahdah",
+        "author": "Brian Chevalier",
         "coursenum": "CEE212",
         "coursetitle": "Engineering Dynamics",
         "title": "Rigid Body Dynamics",
