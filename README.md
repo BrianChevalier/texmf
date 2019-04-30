@@ -1,7 +1,7 @@
 # texmf
 These are a collection of LaTeX class, style, etc. files I use in my work as well as template files used with `nbconvert`.
 
-## Jupyter Notebooks and nbconbert
+## Jupyter Notebooks and nbconvert
 
 Example usage to convert all notebooks in current working directory:
 
