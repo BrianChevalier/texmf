@@ -1,0 +1,71 @@
+{
+  "data": {
+    "file-browser-filebrowser:cwd": {
+      "path": "Example"
+    },
+    "layout-restorer:data": {
+      "main": {
+        "dock": {
+          "type": "split-area",
+          "orientation": "horizontal",
+          "sizes": [
+            0.5,
+            0.5
+          ],
+          "children": [
+            {
+              "type": "tab-area",
+              "currentIndex": 1,
+              "widgets": [
+                "notebook:Example/Example.ipynb",
+                "terminal:1"
+              ]
+            },
+            {
+              "type": "tab-area",
+              "currentIndex": 0,
+              "widgets": [
+                "pdfjs-widget:Example/Example.pdf"
+              ]
+            }
+          ]
+        },
+        "mode": "multiple-document",
+        "current": "terminal:1"
+      },
+      "left": {
+        "collapsed": true,
+        "widgets": [
+          "filebrowser",
+          "running-sessions",
+          "command-palette",
+          "tab-manager"
+        ]
+      },
+      "right": {
+        "collapsed": true,
+        "widgets": []
+      }
+    },
+    "terminal:1": {
+      "data": {
+        "name": "1"
+      }
+    },
+    "pdfjs-widget:Example/Example.pdf": {
+      "data": {
+        "path": "Example/Example.pdf",
+        "factory": "PDFJS"
+      }
+    },
+    "notebook:Example/Example.ipynb": {
+      "data": {
+        "path": "Example/Example.ipynb",
+        "factory": "Notebook"
+      }
+    }
+  },
+  "metadata": {
+    "id": "/user/brianchevalier-texmf-yay47ufx/lab"
+  }
+}

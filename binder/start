@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Install the files in the directory
 bash install.sh
+
+# Import the workspace into JupyterLab
+jupyter lab workspaces import binder/workspace.json \
+  --NotebookApp.base_url=user/${JUPYTERHUB_USER} --name=""
 
 exec "$@"
