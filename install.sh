@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Initialize file structure for user added packages and files
 # Not the admin level texmf tree
@@ -8,7 +8,7 @@ tlmgr init-usertree
 # The path is defined based on platform
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
         # Debian/Ubuntu
-        TEXMF="$HOME/texmf/tex/latex/local"
+        TEXMF="$HOME/texmf/tex/latex/local/"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
         TEXMF="$HOME/Library/texmf/tex/latex/local/"

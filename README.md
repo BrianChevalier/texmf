@@ -1,4 +1,12 @@
 # texmf
+
+
+<p align="center">
+<a href="https://mybinder.org/v2/gh/BrianChevalier/texmf/master?lab"><img src="https://mybinder.org/badge_logo.svg" alt="Binder" /></a>
+<img src="https://img.shields.io/npm/l/express.svg" alt="MIT License Badge">
+</p>
+
+
 These are a collection of LaTeX class, style, etc. files I use in my work as well as template files used with `nbconvert`.
 
 ## Jupyter Notebooks and nbconvert
