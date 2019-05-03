@@ -2,7 +2,7 @@
 
 
 <p align="center">
-<a href="https://mybinder.org/v2/gh/BrianChevalier/texmf/master?urlpath=lab%2Ftree%2FExample%2FExample.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder" /></a>
+<a href="https://mybinder.org/v2/gh/BrianChevalier/texmf/master?urlpath=lab"><img src="https://mybinder.org/badge_logo.svg" alt="Binder" /></a>
 <img src="https://img.shields.io/npm/l/express.svg" alt="MIT License Badge">
 </p>
 
