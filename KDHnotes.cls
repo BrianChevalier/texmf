@@ -200,11 +200,13 @@
 \DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{10}  % for normal
 
 % Python environment
+% Example: https://tex.stackexchange.com/questions/240246/problem-with-tcblisting-at-page-break
 \newtcblisting{python}
 {   colframe=msgreen,
     colback=msgreen,
     listing only,
-		breakable,
+		left = 6mm,
+		breakable, % Allow tcb box to break on page breaks
     listing options={
         language=Python,
         framerule=0.05pt,
@@ -214,9 +216,15 @@
         emph={MyClass,__init__},          % Custom highlighting
         emphstyle=\ttb\color{deepred},    % Custom highlighting style
         stringstyle=\color{deepgreen},
-        breaklines = true,
+        breaklines = true, %Break lines if they're too long
 				showspaces=false,
-				showtabs=false
+				showtabs=false,
+				%configure line numbers
+				numbers=left,
+				numberstyle=\scriptsize\color{gray},
+				% Make left margin line for numbers gray
+				rulecolor=\color{gray},
+				frame=l
     }
 }
 
