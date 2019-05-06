@@ -187,6 +187,7 @@
 % -----
 
 \RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc} %Added for upquote option
 \RequirePackage{listings}
 \tcbuselibrary{listings}
 
@@ -201,6 +202,8 @@
 
 % Python environment
 % Example: https://tex.stackexchange.com/questions/240246/problem-with-tcblisting-at-page-break
+\RequirePackage{textcomp} % Required for upquote option
+% Python box environment
 \newtcblisting{python}
 {   colframe=msgreen,
     colback=msgreen,
@@ -209,6 +212,7 @@
 		breakable, % Allow tcb box to break on page breaks
     listing options={
         language=Python,
+				upquote=true, %Use straight quotes, not curly
         framerule=0.05pt,
         basicstyle=\ttm,
         otherkeywords={self},             % Add keywords here
