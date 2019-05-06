@@ -25,7 +25,7 @@
 \RequirePackage{multicol}
 \RequirePackage{caption}
 \RequirePackage{tikz}
-\RequirePackage{tcolorbox}
+\RequirePackage[most]{tcolorbox}
 \RequirePackage[toc,page]{appendix}
 \RequirePackage{listings}
 \RequirePackage[nottoc,numbib]{tocbibind}
@@ -196,14 +196,15 @@
 \definecolor{deepred}{rgb}{0.6,0,0}
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 
-\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
-\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{10} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{10}  % for normal
 
 % Python environment
 \newtcblisting{python}
 {   colframe=msgreen,
     colback=msgreen,
     listing only,
+		breakable,
     listing options={
         language=Python,
         framerule=0.05pt,
@@ -213,7 +214,9 @@
         emph={MyClass,__init__},          % Custom highlighting
         emphstyle=\ttb\color{deepred},    % Custom highlighting style
         stringstyle=\color{deepgreen},
-        breaklines = true
+        breaklines = true,
+				showspaces=false,
+				showtabs=false
     }
 }
 
