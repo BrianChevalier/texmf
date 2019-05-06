@@ -203,6 +203,28 @@
 % Python environment
 % Example: https://tex.stackexchange.com/questions/240246/problem-with-tcblisting-at-page-break
 \RequirePackage{textcomp} % Required for upquote option
+
+\lstdefinestyle{mypython}{
+	language=Python,
+	upquote=true, %Use straight quotes, not curly
+	framerule=0.05pt,
+	basicstyle=\ttm,
+	otherkeywords={self},             % Add keywords here
+	keywordstyle=\ttb\color{deepblue},
+	emph={MyClass,__init__},          % Custom highlighting
+	emphstyle=\ttb\color{deepred},    % Custom highlighting style
+	stringstyle=\color{deepgreen},
+	breaklines = true, %Break lines if they're too long
+	showspaces=false,
+	showtabs=false,
+	%configure line numbers
+	numbers=left,
+	numberstyle=\scriptsize\color{gray},
+	% Make left margin line for numbers gray
+	rulecolor=\color{gray},
+	frame=l
+}
+
 % Python box environment
 \newtcblisting{python}
 {   colframe=msgreen,
@@ -211,24 +233,7 @@
 		left = 6mm,
 		breakable, % Allow tcb box to break on page breaks
     listing options={
-        language=Python,
-				upquote=true, %Use straight quotes, not curly
-        framerule=0.05pt,
-        basicstyle=\ttm,
-        otherkeywords={self},             % Add keywords here
-        keywordstyle=\ttb\color{deepblue},
-        emph={MyClass,__init__},          % Custom highlighting
-        emphstyle=\ttb\color{deepred},    % Custom highlighting style
-        stringstyle=\color{deepgreen},
-        breaklines = true, %Break lines if they're too long
-				showspaces=false,
-				showtabs=false,
-				%configure line numbers
-				numbers=left,
-				numberstyle=\scriptsize\color{gray},
-				% Make left margin line for numbers gray
-				rulecolor=\color{gray},
-				frame=l
+			style=mypython
     }
 }
 

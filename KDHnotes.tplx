@@ -80,7 +80,7 @@
         ((( draw_figure_with_caption(output.metadata.filenames['application/pdf'], cell.metadata.caption, "") )))
     ((*- endif *))
 ((*- else -*))
-    ((( draw_figure_with_caption(output.metadata.filenames['application/pdf'], "") )))
+    ((( draw_figure_with_caption(output.metadata.filenames['application/pdf'], "", "") )))
 ((*- endif *))
 ((*- endblock -*))
 
