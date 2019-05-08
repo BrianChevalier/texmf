@@ -1,0 +1,29 @@
+\documentclass{KDHnotes}
+
+
+\author{Brian Chevalier}
+\date{\today}
+\title{Example Document}
+%\titleimage{} %Path to title image, default image used otherwise
+\subtitle{Subtitle}
+\coursenum{git101}
+\coursetitle{Intro to gitMechanics}
+\university{Arizona State University}
+
+
+\begin{document}
+
+\maketitle %defined in KDHnotes.cls, makes the title page with above information
+
+\section{This is a section}
+
+\subsection{This is a subsection}
+
+% gbox is a quick and dirty way to write an equation in a green box
+% Also available: bbox, pbox.
+\gbox{
+	 RHS&=\int_0^L f(\xi) d\xi \\ %\\ is new line
+	 &=\int_0^L \xi^2 d\xi % Equations align based on '&'
+}
+
+\end{document}
