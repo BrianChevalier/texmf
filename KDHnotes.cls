@@ -342,4 +342,25 @@
 
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
 
+
+% Volume with dash through it
+\DeclareRobustCommand{\vol}{\text{\volumedash}V}
+\newcommand{\volumedash}{%
+  \makebox[0pt][l]{%
+    \ooalign{\hfil\hphantom{$\m@th V$}\hfil\cr\kern0.08em--\hfil\cr}%
+  }%
+}
+
+% Specific volume shortcut
+% https://www.researchgate.net/post/Hi_can_anybody_help_me_getting_the_LaTeX_script_for_symbol_for_total_volume_specific_volume
+\DeclareRobustCommand{\svol}{
+	\begin{tikzpicture}[scale=0.75]
+	\draw[line width=1, join=round,line cap=round] (0.32,0.35)
+.. controls (0.319,0.3) and (0.318,0.25) ..(0.323,0.2)
+.. controls (0.33,0.15) and (0.34,0.1) ..(0.36,0.07)
+.. controls (0.4,0.1) and (0.46,0.2) ..(0.495,0.35)
+;
+	\end{tikzpicture}
+}
+
 \endinput
