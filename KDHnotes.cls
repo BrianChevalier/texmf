@@ -25,7 +25,7 @@
 \RequirePackage{multicol}
 \RequirePackage{caption}
 \RequirePackage{tikz}
-\RequirePackage[most]{tcolorbox}
+\RequirePackage{tcolorbox}
 \RequirePackage[toc,page]{appendix}
 \RequirePackage{listings}
 \RequirePackage[nottoc,numbib]{tocbibind}
@@ -244,9 +244,40 @@
 \newtcbox{\purplebox}[1][]{
 	nobeforeafter,
 	tcbox raise base,
-	colframe=blue!30,
-	colback=blue!30,
+	colframe=mspurple,
+	colback=mspurple,
 	boxrule=1pt,
+}
+
+\newtcbox{\redbox}[1][]{
+	nobeforeafter,
+	tcbox raise base,
+	colframe=msred,
+	colback=msred,
+	boxrule=1pt,
+}
+
+\newtcbox{\orangebox}[1][]{
+	nobeforeafter,
+	tcbox raise base,
+	colframe=msorange,
+	colback=msorange,
+	boxrule=1pt,
+}
+
+\newcommand{\obox}[1]{
+	\begin{empheq}[
+		box=\orangebox]{align}
+		#1
+	\end{empheq}
+}
+
+
+\newcommand{\rbox}[1]{
+	\begin{empheq}[
+		box=\redbox]{align}
+		#1
+	\end{empheq}
 }
 
 % purple box shortcut
@@ -344,12 +375,15 @@
 
 
 % Volume with dash through it
-\DeclareRobustCommand{\vol}{\text{\volumedash}V}
+\makeatletter
 \newcommand{\volumedash}{%
   \makebox[0pt][l]{%
     \ooalign{\hfil\hphantom{$\m@th V$}\hfil\cr\kern0.08em--\hfil\cr}%
   }%
 }
+
+\DeclareRobustCommand{\vol}{\text{\volumedash}V}
+\makeatother
 
 % Specific volume shortcut
 % https://www.researchgate.net/post/Hi_can_anybody_help_me_getting_the_LaTeX_script_for_symbol_for_total_volume_specific_volume
