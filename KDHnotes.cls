@@ -358,17 +358,31 @@
 	\end{figure}
 }
 
+\newcommand{\tallfig}[2]{
+%1: Path relative to Figures/
+%2: Caption
+	\begin{figure}[!hp]
+		\centering
+		\includegraphics[max height=0.9\textheight,max width=0.8\textwidth]{Figures/#1}
+		\caption{#2}
+		\label{Fig:#1}
+	\end{figure}
+}
+
+
 %% FIGURE for .ipynb file conversion
 \RequirePackage{float}
 \newcommand{\ipynbfig}[2]{
 %1: Path relative to Figures/
 %2: Caption
+	\vfill
 	\begin{figure}[h]
 		\centering
 		\includegraphics[max height=0.4\textheight,max width=0.8\textwidth]{#1}
 		\caption{#2}
 		\label{Fig:#1}
 	\end{figure}
+	\vfill
 }
 
 \renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
